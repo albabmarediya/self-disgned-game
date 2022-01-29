@@ -3,22 +3,24 @@ var score=0;
 var name = "albab";
 
 function preload() {
-  bg = loadImage("aladdin_cave.jpg");
-  bg2 = loadImage("treasure.jpg");
+  coding = loadImage("aladdin_cave2.jpg");
+  treasure = loadImage("treasure.jpg");
+  sports= loadImage("aladdin_cave.jpg");
+  animal = loadImage("images.jpg.jpg");
+  gk = loadImage("gk.jpg");
+  ceo = loadImage("ceo.jpg");
 }
 
 function setup() {
   createCanvas(1000,500);
   system = new System()
   security = new Security();
-  sp = new StartPage();
+ 
 }
-
 function draw() {
-  background(bg);
-  sp.swal();
-  clues();
-  security.display();
+  background(coding); 
+  clueStage1();
+  security.display1();
   
   textSize(20);
   fill("white");
@@ -26,7 +28,9 @@ function draw() {
 
   if(score === 3) {
     clear()
-    background(bg2)
+    background(coding);
+    // clueStage2();
+    // security.display2();
     fill("black")
     textSize(40);
     text("TREASURE UNLOCKED",250, 200);
